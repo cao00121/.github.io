@@ -1,0 +1,30 @@
+/* default body theme style */
+body {
+    background-color: white;
+    color: black;
+    font-family:Impact, Haettenschweiler, sans-serif
+}
+
+/* define theme 1 */
+.theme1 {
+    background-color: orange;
+    color: black;
+}
+
+/* define theme 2 */
+.theme2 {
+    background-color: green;
+    color: white;
+}
+
+/* define theme 3 */
+.theme3 {
+    background-color: pink;
+    color: purple;
+}
+
+/* define theme 4 */
+.theme4 {
+    background-color: black;
+    color: white;
+}
