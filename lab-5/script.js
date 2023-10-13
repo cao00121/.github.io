@@ -3,7 +3,7 @@ console.log('Use the following functions to showcase:');
 console.log('addBook() -- Used to add a new book to the catalogue.');
 console.log('showBooks() -- Used to display a list of book titles and their indexes in the catalogue.');
 console.log('showBook() -- Used to display the details of a book, including the book\'s title, author, and genre.');
-console.log('Sample Input -- Book 1: \'One Hundred Years of Solitude\', \'Gabriel García Márquez\', \'Magical Realism\'\n Book 2: \'The Call of the Wild\', \'Jack London\', \'Adventure\'')
+console.log('Sample Input -- Book 1: addBook(\'One Hundred Years of Solitude\', \'Gabriel García Márquez\', \'Magical Realism\')\n Book 2: addBook(\'The Call of the Wild\', \'Jack London\', \'Adventure\')')
 
 // Create an empty book catalogue
 let bookCatalogue = [];
@@ -19,7 +19,7 @@ function addBook (title, author, genre) {
     return 'Book added';
 }
 
-// Create function to display a list of book titles and the indexes
+//Create function to display a list of book titles and the indexes
 function showBooks() {
     if (bookCatalogue.length === 0){
         return 'No books yet.'
@@ -28,6 +28,7 @@ function showBooks() {
         console.log(i + ': ' + bookCatalogue[i].title);
     }
 }
+
 
 // Create function to display the details of a book
 function showBook (index) {
