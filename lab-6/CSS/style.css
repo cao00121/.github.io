@@ -1,0 +1,50 @@
+/* Import the font used as label */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    flex-wrap: wrap;
+}
+
+.emoji-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.emoji-container {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border: 1.6px solid rgb(214, 214, 214);
+    border-radius: 2px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emoji-name {
+    font-size: 0.8rem;
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: lightgrey;
+    max-width: 80%;
+    line-height: 1rem;
+    padding: 2px 8px;
+    text-align: center;
+}
+
+.emoji-block {
+    font-size: 4rem;
+    display: block;
+}
