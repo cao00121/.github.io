@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CST8209 - Lab 10</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300&family=Permanent+Marker&display=swap" rel="stylesheet">
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+          }
+          h1 {
+               text-align: center;
+               font-family: 'Permanent Marker', cursive;
+          }
+          input[type='date'] {
+               width: 70rem;
+               height: 3rem;
+               border: none;
+               box-shadow: 0px 5px 12px rgba(0,0,0,0.15);
+               border-radius: 4px;
+               padding-left: 10px;
+               padding-right: 10px;
+               font-family: 'Lexend', sans-serif;
+               font-weight: 100;
+          }
+          #submit {
+               width: 6rem;
+               height: 3rem;
+               border-radius: 4px;
+               border: none;
+               margin-left: 20px;
+               background-color: rgb(27, 133, 255);
+               font-family: 'Lexend', sans-serif;
+               font-weight: 300;
+               color: white;
+          }
+          #submit:hover {
+               background-color: rgb(83, 163, 255);;
+          }
+          #submit:active {
+               background-color: rgb(0, 119, 255);;
+          }
+          #history > div:first-child {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               margin-top: 50px;
+               margin-bottom: 20px;
+               width: 100%;
+               min-width: 1260px;
+          }
+          #history > div h2 {
+               font-family: 'Lexend', sans-serif;
+               font-weight: 300;
+          }
+          #history > div button {
+               width: 4rem;
+               height: 2.5rem;
+               border: none;
+               border-radius: 4px;
+               font-family: 'Lexend', sans-serif;
+               font-weight: 300;
+               color: rgb(148, 148, 148);
+          }
+          #colors > div {
+               width: 100%;
+               border-radius: 4px;
+               align-self: center;
+          }
+          #colors > div p {
+               font-family: 'Lexend', sans-serif;
+               font-weight: 300;
+          }
+     </style>
+</head>
+<body>
+     <h1>Color of the Day</h1>
+     <form id="form">
+          <input type="date" id="date">
+          <button id="submit">Get Color</button>
+     </form>
+
+     <div id="history">
+          <div>
+               <h2>History</h2>
+               <button id="clear">Clear</button>
+          </div>
+          <div id="colors"></div>
+     </div>
+     <script src="./script.js"></script>
+</body>
+</html>
