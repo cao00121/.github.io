@@ -8,7 +8,13 @@ console.log('Sample Input -- Book 1: addBook(\'One Hundred Years of Solitude\', 
 // Create an empty book catalogue
 let bookCatalogue = [];
 
-// Create function to add books
+/** This function will add a new book to the catalogue.
+ * 
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ * @param {string} genre - The genre of the book.
+ * @returns - "Book added" - returns a string to confirm the book has been added.
+ */
 function addBook (title, author, genre) {
     let newBook = {
         title: title,
@@ -19,18 +25,27 @@ function addBook (title, author, genre) {
     return 'Book added';
 }
 
-//Create function to display a list of book titles and the indexes
+/** This function will display a list of book titles and their indexes in the catalogue.
+ * 
+ * @returns - "No books yet." - returns a string to confirm there are no books in the catalogue.
+ */
 function showBooks() {
     if (bookCatalogue.length === 0){
         return 'No books yet.'
     }
-    for (let i = 0; i < bookCatalogue.length; i++) {
+    let i = 0;
+    while (i < bookCatalogue.length) {
         console.log(i + ': ' + bookCatalogue[i].title);
+        i++;
     }
 }
 
 
-// Create function to display the details of a book
+/** This function will display the details of a book, including the book's title, author, and genre.
+ * 
+ * @param {number} index - The index of the book in the catalogue.
+ * @returns - "No books yet." - returns a string to confirm there are no books in the catalogue.
+ */
 function showBook (index) {
     if (bookCatalogue.length === 0) {
         return 'No books yet.'
