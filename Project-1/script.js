@@ -6,7 +6,14 @@ console.log('showPasswordsList() -- Used to provide an overview of the user\'s s
 console.log('showPassword()-- Used to display a specified password the user selected.')
 console.log("Sample Input -- addPassword('Toby1234','GeneratedCode','Facebook')\n                addPassword('Toby5678','GeneratedCode','WhatsApp')")
 
-// Create the generateCode function's default value list.
+/** This function is used to randomly generates a string of characters of a specified length.
+ *  It takes two parameters: the length of the generated code, and whether the code should contains numbers or not.
+ *  And the default boolean value of the seconde parameter is false.
+ *  It will return a string of characters of a specified length.
+ * @param {Number} length - The length of the generated code.
+ * @param {Boolean} includeNumbers - Whether the code should contains numbers or not.
+ * @returns - A string of characters of a specified length.
+ */
 function generateCode(length = 6, includeNumbers = false) {
     // Declare an empty string to store the generated characters.
     let password = '';
@@ -36,7 +43,14 @@ function generateCode(length = 6, includeNumbers = false) {
 const passwordCatalogue = [];
 
 
-// Create the addPassword function to generate the username and password related to an application.
+/** This function will take three parameters: username(string), password(string), relatedApp(string).
+ *  It will add the username, password and related application to the passwordCatalogue array.
+ *  It will return a string to confirm the username, password and related application has been saved.
+ * @param {String} username - The username of the application.
+ * @param {String} password - The password of the application.
+ * @param {String} relatedApp - The application related to the username and password.
+ * @returns - A string to confirm the username, password and related application has been saved.
+ */
 function addPassword (username, password, relatedApp) {
     // Declare a new array to save username, password and related application.
     const newPassword = {
@@ -48,7 +62,16 @@ function addPassword (username, password, relatedApp) {
     return `Your ${relatedApp}'s username and password has been saved.`
 }
 
-// Create the showPasswordList function to display all related applications with username and password.
+/** This function will display the related application's username and password.
+ *  It will take one parameter: index(number).
+ *  There is a if-else statement to check if the passwordCatalogue array is empty or not.
+ *  If the passwordCatalogue array is empty, it will return a string to inform the user the passwordCatalogue array is empty.
+ *  If the passwordCatalogue array is not empty, it will check if the index is valid or not.
+ *  If the index is valid, it will display the related application's username and password.
+ *  If the index is not valid, it will return a string to inform the user the index is invalid.
+ * @param {Number} index - The index of the passwordCatalogue array. And the default value is 0.
+ * @returns - A string to inform the user the passwordCatalogue array is empty or the index is invalid.
+ */
 function showPasswordsList () {
     if(passwordCatalogue.length === 0) {
         console.log('Empty list. No related apps\'s password saved.')
@@ -60,7 +83,16 @@ function showPasswordsList () {
     }
 }
 
-// Create the showPassword function to display the selected application's username and password.
+/** This function will display the related application's username and password.
+ *  It will take one parameter: index(number).
+ *  There is a if-else statement to check if the passwordCatalogue array is empty or not.
+ *  If the passwordCatalogue array is empty, it will return a string to inform the user the passwordCatalogue array is empty.
+ *  If the passwordCatalogue array is not empty, it will check if the index is valid or not.
+ *  If the index is valid, it will display the related application's username and password.
+ *  If the index is not valid, it will return a string to inform the user the index is invalid.
+ * @param {Number} index - The index of the passwordCatalogue array. And the default value is 0.
+ * @returns - A string to inform the user the passwordCatalogue array is empty or the index is invalid.
+ */
 function showPassword (index) {
     if (passwordCatalogue.length === 0) {
         console.log('Empty list. No related app\'s password saved.');
